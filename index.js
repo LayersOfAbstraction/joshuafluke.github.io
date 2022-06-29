@@ -1,4 +1,11 @@
-export const Foo = () => (
+import React from "react"
+import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
+import pic1 from "../images/pic01.jpg"
+import pic2 from "../images/pic02.jpg"
+import pic3 from "../images/pic03.jpg"
+
+export const Home = () => (
   <>
     {/*
 	Massively by HTML5 UP
@@ -72,7 +79,7 @@ export const Foo = () => (
             </p>
           </header>
           <a href="#" className="image main">
-            <img src="images/pic01.jpg" alt="" />
+            <img src={pic1} alt="" />
           </a>
           <ul className="actions special">
             <li>
@@ -94,7 +101,7 @@ export const Foo = () => (
               </h2>
             </header>
             <a href="#" className="image fit">
-              <img src="images/pic02.jpg" alt="" />
+              <img src={pic1} alt="" />
             </a>
             <p>
               Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
@@ -119,7 +126,7 @@ export const Foo = () => (
               </h2>
             </header>
             <a href="#" className="image fit">
-              <img src="images/pic03.jpg" alt="" />
+              <img src={pic3} alt="" />
             </a>
             <p>
               Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
