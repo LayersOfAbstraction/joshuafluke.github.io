@@ -1,3 +1,5 @@
+import { Link } from "gatsby"
+import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
 import pic3 from "../images/pic03.jpg"
@@ -6,7 +8,8 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
-export const Home = () => (
+export default function Home() {
+  return(
   <>
     {/*
 	Massively by HTML5 UP
@@ -19,50 +22,46 @@ export const Home = () => (
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-      &lt;link rel="stylesheet" href="assets/css/noscript.css" /&gt;
-    </noscript>
     {/* Wrapper */}
     <div id="wrapper" className="fade-in">
       {/* Intro */}
       <div id="intro">
         <h1>My Portfolio</h1>
-        <p>A showcase of my projects and my abilities.</p>
+        <p>Link showcase of my projects and my abilities.</p>
         <ul className="actions">
           <li>
-            <a
-              href="#header"
+            <Link
+              to="#header"
               className="button icon solo fa-arrow-down scrolly"
             >
               Continue
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       {/* Header */}
       <header id="header">
-        <a href="index.html" className="logo">
+        <Link to="index.html" className="logo">
           Massively
-        </a>
+        </Link>
       </header>
       {/* Nav */}
       <nav id="nav">
         <ul className="links">
           <li className="active">
-            <a href="index.html">This is Massively</a>
+            <Link to="index.html">This is Massively</Link>
           </li>
         </ul>
         <ul className="icons">
           <li>
-            <a href="#" className="icon fa-linkedin">
+            <Link to="#" className="icon fa-linkedin">
               <span className="label">Instagram</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="icon fa-github">
+            <Link to="#" className="icon fa-github">
               <span className="label">GitHub</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -72,21 +71,21 @@ export const Home = () => (
         <article className="post featured">
           <header className="major">
             <h2>
-              <a href="#">My Name is Joshua Fluke</a>
+              <Link to="#">My Name is Joshua Fluke</Link>
             </h2>
             <p>
-              I'm a passionate developer but more importantly I'm passionate
+              I'm Link passionate developer but more importantly I'm passionate
               about technology.
             </p>
           </header>
-          <a href="#" className="image main">
+          <Link to="#" className="image main">
             <img src={pic1} alt="" />
-          </a>
+          </Link>
           <ul className="actions special">
             <li>
-              <a href="#" className="button large">
+              <Link to="#" className="button large">
                 Check it out
-              </a>
+              </Link>
             </li>
           </ul>
         </article>
@@ -95,15 +94,15 @@ export const Home = () => (
           <article>
             <header>
               <h2>
-                <a href="#">
+                <Link to="#">
                   Project 1<br />
                   ipsum faucibus
-                </a>
+                </Link>
               </h2>
             </header>
-            <a href="#" className="image fit">
+            <Link to="#" className="image fit">
               <img src={pic2} alt="" />
-            </a>
+            </Link>
             <p>
               Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
               primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
@@ -111,24 +110,24 @@ export const Home = () => (
             </p>
             <ul className="actions special">
               <li>
-                <a href="#" className="button">
+                <Link to="#" className="button">
                   Full Story
-                </a>
+                </Link>
               </li>
             </ul>
           </article>
           <article>
             <header>
               <h2>
-                <a href="#">
+                <Link to="#">
                   Project 2<br />
                   imperdiet lorem
-                </a>
+                </Link>
               </h2>
             </header>
-            <a href="#" className="image fit">
+            <Link to="#" className="image fit">
               <img src={pic3} alt="" />
-            </a>
+            </Link>
             <p>
               Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
               primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
@@ -136,9 +135,9 @@ export const Home = () => (
             </p>
             <ul className="actions special">
               <li>
-                <a href="#" className="button">
+                <Link to="#" className="button">
                   Full Story
-                </a>
+                </Link>
               </li>
             </ul>
           </article>
@@ -159,37 +158,37 @@ export const Home = () => (
           <section>
             <h3>Phone</h3>
             <p>
-              <a href="#">(000) 000-0000</a>
+              <Link to="#">(000) 000-0000</Link>
             </p>
           </section>
           <section>
             <h3>Email</h3>
             <p>
-              <a href="#">info@untitled.tld</a>
+              <Link to="#">info@untitled.tld</Link>
             </p>
           </section>
           <section>
             <h3>Social</h3>
             <ul className="icons alt">
               <li>
-                <a href="#" className="icon alt fa-twitter">
+                <Link to="#" className="icon alt fa-twitter">
                   <span className="label">Twitter</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="icon alt fa-facebook">
+                <Link to="#" className="icon alt fa-facebook">
                   <span className="label">Facebook</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="icon alt fa-instagram">
+                <Link to="#" className="icon alt fa-instagram">
                   <span className="label">Instagram</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="icon alt fa-github">
+                <Link to="#" className="icon alt fa-github">
                   <span className="label">GitHub</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
@@ -200,11 +199,12 @@ export const Home = () => (
         <ul>
           <li>© Untitled</li>
           <li>
-            Design: <a href="https://html5up.net">HTML5 UP</a>
+            Design: <Link to="https://html5up.net">HTML5 UP</Link>
           </li>
         </ul>
       </div>
     </div>
     {/* Scripts */}
   </>
-)
+  );
+}
