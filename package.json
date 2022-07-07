@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "gatsby-plugin-react-helmet": "^5.17.0",
-    "react-helmet": "^6.1.0"
-  }
-}
