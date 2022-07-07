@@ -1,4 +1,7 @@
 import { Link } from "gatsby"
+import { withPrefix } from "gatsby"
+import { Helmet } from "react-helmet"
+
 import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
@@ -205,6 +208,15 @@ export default function Home() {
       </div>
     </div>
     {/* Scripts */}
+    <Helmet>
+        <script src={withPrefix('../assets/js/jquery.min.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/jquery.scrollex.min.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/jquery.scrolly.min.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/browser.min.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/breakpoints.min.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/util.js')} type="text/javascript" />
+        <script src={withPrefix('../assets/js/main.js')} type="text/javascript" />
+    </Helmet>
   </>
   );
 }
