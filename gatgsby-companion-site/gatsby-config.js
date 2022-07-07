@@ -3,5 +3,5 @@ module.exports = {
     title: `Portfolio Blogging site`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-react-helmet"],
 }
