@@ -11,9 +11,6 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
-import { Helmet } from "react-helmet"
-import { withPrefix } from "gatsby"
-
 export default function Home() {
   return(
   <>
