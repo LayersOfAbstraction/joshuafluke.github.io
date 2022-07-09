@@ -8,6 +8,9 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
+import { Helmet } from "react-helmet"
+import { withPrefix } from "gatsby"
+
 export default function Home() {
   return(
   <>
@@ -205,6 +208,15 @@ export default function Home() {
       </div>
     </div>
     {/* Scripts */}
+    <Helmet>
+        <script src={withPrefix('./js/jquery.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/jquery.scrollex.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/jquery.scrolly.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/browser.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/breakpoints.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/util.js')} type="text/javascript" />
+        <script src={withPrefix('./js/main.js')} type="text/javascript" />
+    </Helmet>
   </>
   );
 }
