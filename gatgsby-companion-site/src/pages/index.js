@@ -1,4 +1,7 @@
 import { Link } from "gatsby"
+import { withPrefix } from "gatsby"
+import { Helmet } from "react-helmet"
+
 import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
