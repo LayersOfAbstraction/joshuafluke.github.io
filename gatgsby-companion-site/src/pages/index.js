@@ -7,7 +7,11 @@ import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
 import pic3 from "../images/pic03.jpg"
 
-export default function Home( children) {
+import "../assets/css/font-awesome.min.css"
+import "../assets/css/main.css"
+import "../assets/css/noscript.css"
+
+export default function Home() {
   return(
   <>
     {/*
@@ -212,7 +216,11 @@ export default function Home( children) {
         <script src={withPrefix('./js/breakpoints.min.js')} type="text/javascript" />
         <script src={withPrefix('./js/util.js')} type="text/javascript" />
         <script src={withPrefix('./js/main.js')} type="text/javascript" />
+<<<<<<< HEAD
     </Helmet>  
+=======
+    </Helmet>
+>>>>>>> 529ca18b3ab4619d2a3dd7572369b8a18ff041bd
   </>
   );
 }
