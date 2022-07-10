@@ -205,14 +205,14 @@ export default function Home( children) {
     </div>
     {/* Scripts */}
     <Helmet>
-        <script src={withPrefix('../../static/jquery.min.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/jquery.scrollex.min.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/jquery.scrolly.min.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/browser.min.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/breakpoints.min.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/util.js')} type="text/javascript" />
-        <script src={withPrefix('../../static/main.js')} type="text/javascript" />
-    </Helmet>
+        <script src={withPrefix('./js/jquery.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/jquery.scrollex.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/jquery.scrolly.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/browser.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/breakpoints.min.js')} type="text/javascript" />
+        <script src={withPrefix('./js/util.js')} type="text/javascript" />
+        <script src={withPrefix('./js/main.js')} type="text/javascript" />
+    </Helmet>  
   </>
   );
 }
