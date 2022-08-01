@@ -216,11 +216,7 @@ export default function Home() {
         <script src={withPrefix('./js/breakpoints.min.js')} type="text/javascript" />
         <script src={withPrefix('./js/util.js')} type="text/javascript" />
         <script src={withPrefix('./js/main.js')} type="text/javascript" />
-<<<<<<< HEAD
     </Helmet>  
-=======
-    </Helmet>
->>>>>>> 529ca18b3ab4619d2a3dd7572369b8a18ff041bd
   </>
   );
 }
