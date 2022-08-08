@@ -207,16 +207,6 @@ export default function Home() {
         </ul>
       </div>
     </div>
-    {/* Scripts */}
-    <Helmet>
-        <script src={withPrefix('./js/jquery.min.js')} type="text/javascript" />
-        <script src={withPrefix('./js/jquery.scrollex.min.js')} type="text/javascript" />
-        <script src={withPrefix('./js/jquery.scrolly.min.js')} type="text/javascript" />
-        <script src={withPrefix('./js/browser.min.js')} type="text/javascript" />
-        <script src={withPrefix('./js/breakpoints.min.js')} type="text/javascript" />
-        <script src={withPrefix('./js/util.js')} type="text/javascript" />
-        <script src={withPrefix('./js/main.js')} type="text/javascript" />
-    </Helmet>  
   </>
   );
 }
