@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-
+import Sidebar from '../components/sidebar'
 import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
@@ -26,7 +26,9 @@ export default function Home() {
       {/* Wrapper */}
       <div id="wrapper" className="fade-in">
         {/* sidebar */}
-        {/* Pass sidebar component to index */}
+        {/* TODO: Pass sidebar component to index */}
+        {/* Pass nav bar links into sidebar */}
+        <Sidebar>{nav}</Sidebar>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
