@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
-import Sidebar from '../components/sidebar'
+import Sidebar from "../components/sidebar"
+import styled from "styled-components"
 import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
@@ -9,7 +10,23 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
-export default function Home() {
+const menuIcon = styled.button`
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: fex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: button;
+  cursor: pointer;
+  z-index: 5;
+  ` 
+
+
+const Home = () => {
   return (
     <>
       {/*
@@ -28,7 +45,7 @@ export default function Home() {
         {/* sidebar */}
         {/* TODO: Pass sidebar component to index */}
         {/* Pass nav bar links into sidebar */}
-        <Sidebar>{nav}</Sidebar>
+        {/* <Sidebar>{nav}</Sidebar> */}
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
@@ -212,3 +229,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home
