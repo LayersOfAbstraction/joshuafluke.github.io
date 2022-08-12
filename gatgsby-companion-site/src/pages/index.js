@@ -10,7 +10,7 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
-const menuIcon = styled.button`
+const MenuIcon = styled.button`
   position: fixed;
   top: 2rem;
   right: 2rem;
@@ -45,7 +45,12 @@ const Home = () => {
         {/* sidebar */}
         {/* TODO: Pass sidebar component to index */}
         {/* Pass nav bar links into sidebar */}
-        {/* <Sidebar>{nav}</Sidebar> */}
+        <MenuIcon>
+          <div/>
+          <div/>
+          <div/>
+          <div/>
+        </MenuIcon>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
