@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
-import Sidebar from "../components/sidebar"
-import styled from "styled-components"
-import React from "react"
+import styled, {createGlobalStyle} from "styled-components"
+import React, { useState} from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
 import pic3 from "../images/pic03.jpg"
@@ -10,8 +9,13 @@ import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
+const Global = createGlobalStyle`
+  body{
+    margin: 0;
+  }
+`
 const MenuIcon = styled.button`
-  position: fixed;
+position: fixed;
   top: 2rem;
   right: 2rem;
   display: flex;
@@ -34,7 +38,44 @@ const MenuIcon = styled.button`
   }
 `
 
+const Menulinks = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
+
+  ul{
+    list-style-type: none;
+  }
+
+  li{
+    margin-top: 1rem
+  }
+
+
+   a{
+     text-decoration: none; 
+     color: black;
+     font-size: 1.5rem;
+     transition: color 300ms;
+   }
+
+  :hover {
+    color: #6ab4ff    
+  }
+`
+
+
 const Home = () => {
+  const [nav, showNav] = useState(false)
+    
   return (
     <>
       {/*
@@ -53,12 +94,26 @@ const Home = () => {
         {/* sidebar */}
         {/* TODO: Pass sidebar component to index */}
         {/* Pass nav bar links into sidebar */}
-          <MenuIcon>
-            <div/>
+          <div>          
+          <Global />
+          <MenuIcon onClick={() => showNav(!nav)}>
             <div/>
             <div/>
             <div/>
           </MenuIcon>
+ 
+          <Menulinks nav={nav}>
+          <nav>
+            <ul>
+              <Link to="#">Blog</Link>
+            </ul>
+            <ul>
+              <Link to="#">Blog</Link>
+            </ul>
+          </nav>
+          </Menulinks>
+          
+          </div>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
@@ -81,25 +136,25 @@ const Home = () => {
           </Link>
         </header>
         {/* Nav */}
-        <nav id="nav">
-          <ul className="links">
-            <li className="active">
-              <Link to="index.html">This is Massively</Link>
-            </li>
-          </ul>
-          <ul className="icons">
-            <li>
-              <Link to="#" className="icon fa-linkedin">
-                <span className="label">Instagram</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="icon fa-github">
-                <span className="label">GitHub</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+          <nav id="nav">
+            <ul className="links">
+              <li className="active">
+                <Link to="index.html">This is Massively</Link>
+              </li>
+            </ul>
+            <ul className="icons">
+              <li>
+                <Link to="#" className="icon fa-linkedin">
+                  <span className="label">Instagram</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="icon fa-github">
+                  <span className="label">GitHub</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
         {/* Main */}
         <div id="main">
           {/* Featured Post */}
