@@ -1,5 +1,5 @@
 import * as React from 'react'
-export const Foo = () => (
+export const Foo =  () => (
     <>
       <div id="mySidebar" className="sidebar">
         <a href="javascript:void(0)" className="closebtn" onclick="closeNav()"></a>
