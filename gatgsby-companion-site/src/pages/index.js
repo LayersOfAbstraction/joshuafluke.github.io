@@ -20,14 +20,14 @@ const MenuIcon = styled.button`
   width: 1.5rem;
   height: 1.5rem;
   background: transparent;
-  border: white;
+  border: none;
   cursor: pointer;
   z-index: 5;
 
   div {
     width: 1.5rem;
     height: 0.2rem;
-    background: black;
+    background: white;
     border-radius: 5px;
     transform-origin: 1px;
     position: relative;
@@ -53,12 +53,12 @@ const Home = () => {
         {/* sidebar */}
         {/* TODO: Pass sidebar component to index */}
         {/* Pass nav bar links into sidebar */}
-        <MenuIcon>
-          <div/>
-          <div/>
-          <div/>
-          <div/>
-        </MenuIcon>
+          <MenuIcon>
+            <div/>
+            <div/>
+            <div/>
+            <div/>
+          </MenuIcon>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
