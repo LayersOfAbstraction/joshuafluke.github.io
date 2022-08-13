@@ -62,7 +62,7 @@ const Menulinks = styled.nav`
 
    a{
      text-decoration: none; 
-     color: black;
+     color: white;
      font-size: 1.5rem;
      transition: color 300ms;
    }
@@ -108,7 +108,7 @@ const Home = () => {
               <Link to="#">Blog</Link>
             </ul>
             <ul>
-              <Link to="#">Blog</Link>
+              <Link to="#">home</Link>
             </ul>
           </nav>
           </Menulinks>
