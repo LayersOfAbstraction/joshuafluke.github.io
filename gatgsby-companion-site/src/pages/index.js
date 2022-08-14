@@ -116,7 +116,7 @@ const Home = () => {
         {/* Pass nav bar links into sidebar */}
           <div>          
           <Global />
-          <MenuIcon href="javascript:void(0)" nav={nav} onClick={() => showNav(!nav)}>
+          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
             <div/>
             <div/>
             <div/>
