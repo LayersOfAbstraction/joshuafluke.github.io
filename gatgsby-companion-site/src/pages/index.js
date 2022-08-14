@@ -66,6 +66,8 @@ const Menulinks = styled.nav`
   width: 25%;
   position: absolute;
   transition: 300ms;
+  background-color: black;
+  width: "250px";
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
@@ -91,7 +93,6 @@ const Menulinks = styled.nav`
   }
 `
 
-
 const Home = () => {
   const [nav, showNav] = useState(false)
     
@@ -115,7 +116,7 @@ const Home = () => {
         {/* Pass nav bar links into sidebar */}
           <div>          
           <Global />
-          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+          <MenuIcon href="javascript:void(0)" nav={nav} onClick={() => showNav(!nav)}>
             <div/>
             <div/>
             <div/>
