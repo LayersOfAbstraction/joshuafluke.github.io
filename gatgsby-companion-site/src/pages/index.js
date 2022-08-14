@@ -12,6 +12,8 @@ import "../assets/css/noscript.css"
 const Global = createGlobalStyle`
   body{
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 `
 const MenuIcon = styled.button`
@@ -27,6 +29,7 @@ position: fixed;
   border: none;
   cursor: pointer;
   z-index: 5;
+  overflow-x: hidden;
 
   div {
     width: 1.5rem;
@@ -35,6 +38,19 @@ position: fixed;
     border-radius: 5px;
     transform-origin: 1px;
     position: relative;
+    transition: opacity 300ms, transform;
+
+    :first-child{
+      transform: $({nav}) => nav ? 'rotate(45deg)': 'rotate(0)'} 
+    }
+
+    :nth-child(2){
+      opacity: ${({nav}) => nav ? "0" : "1"}
+    } 
+    
+    :nth-child(3){
+      transform: $({nav}) => nav ? 'rotate(-45deg)': 'rotate(0)'} 
+    }
   }
 `
 
@@ -45,8 +61,9 @@ const Menulinks = styled.nav`
   align-items: center;
   text-align: center;
   height: 100vh;
-  width: 100%;
+  width: 25%;
   position: absolute;
+  transition: 300ms;
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
@@ -96,7 +113,7 @@ const Home = () => {
         {/* Pass nav bar links into sidebar */}
           <div>          
           <Global />
-          <MenuIcon onClick={() => showNav(!nav)}>
+          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
             <div/>
             <div/>
             <div/>
