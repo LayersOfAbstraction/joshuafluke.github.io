@@ -10,14 +10,14 @@ import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 
 const Global = createGlobalStyle`
-  body{
+  body, html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
 `
 const MenuIcon = styled.button`
-position: fixed;
+  position: fixed;
   top: 2rem;
   right: 2rem;
   display: flex;
@@ -29,7 +29,6 @@ position: fixed;
   border: none;
   cursor: pointer;
   z-index: 5;
-  overflow-x: hidden;
 
   div {
     width: 1.5rem;
@@ -38,36 +37,33 @@ position: fixed;
     border-radius: 5px;
     transform-origin: 1px;
     position: relative;
-    transition: opacity 300ms, transform;
+    transition: opacity 300ms, transform 300ms;
 
     :first-child{
-      transform: $({nav}) => nav ? 'rotate(45deg)': 'rotate(0)'
+      transform: ${({nav}) => (nav ? 'rotate(45deg)': 'rotate(0)')}
     } 
     
 
     :nth-child(2){
-      opacity: ${({nav}) => nav ? "0" : "1"}
+      opacity: ${({nav}) => (nav ? "0" : "1")}
     } 
     
     :nth-child(3){
-      transform: $({nav}) => nav ? 'rotate(-45deg)': 'rotate(0)'
+      transform: ${({nav}) => (nav ? 'rotate(-45deg)': 'rotate(0)')}
     }
-  }
-  
+  }  
 `
 
 const Menulinks = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
   height: 100vh;
-  width: 25%;
+  width: 20%;
   position: absolute;
   transition: 300ms;
   background-color: black;
-  width: "250px";
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
@@ -113,10 +109,9 @@ const Home = () => {
       <div id="wrapper" className="fade-in">
         {/* sidebar */}
         {/* TODO: Pass sidebar component to index */}
-        {/* Pass nav bar links into sidebar */}
-          <div>          
+        {/* Pass nav bar links into sidebar */}      
           <Global />
-          <MenuIcon href="javascript:void(0)" nav={nav} onClick={() => showNav(!nav)}>
+          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
             <div/>
             <div/>
             <div/>
@@ -133,7 +128,6 @@ const Home = () => {
           </nav>
           </Menulinks>
           
-          </div>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
