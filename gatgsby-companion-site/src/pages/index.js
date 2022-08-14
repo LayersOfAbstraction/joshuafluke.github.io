@@ -41,16 +41,16 @@ position: fixed;
     transition: opacity 300ms, transform;
 
     :first-child{
-      transform: $({nav}) => nav ? 'rotate(45deg)': 'rotate(0)'
+      transform: ${({nav}) => (nav ? 'rotate(45deg)': 'rotate(0)')}
     } 
     
 
     :nth-child(2){
-      opacity: ${({nav}) => nav ? "0" : "1"}
+      opacity: ${({nav}) => (nav ? "0" : "1")}
     } 
     
     :nth-child(3){
-      transform: $({nav}) => nav ? 'rotate(-45deg)': 'rotate(0)'
+      transform: ${({nav}) => (nav ? 'rotate(-45deg)': 'rotate(0)')}
     }
   }
   
@@ -70,6 +70,7 @@ const Menulinks = styled.nav`
   width: "250px";
   top: 0;
   right: 0;
+  z-index: 999;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
 
   ul{
