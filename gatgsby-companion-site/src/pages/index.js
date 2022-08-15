@@ -28,7 +28,7 @@ const MenuIcon = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 5;
+  z-index: 999;
 
   div {
     width: 1.5rem;
@@ -66,7 +66,7 @@ const Menulinks = styled.nav`
   background-color: black;
   top: 0;
   right: 0;
-  z-index: 999;
+  z-index: 998;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
 
   ul{
