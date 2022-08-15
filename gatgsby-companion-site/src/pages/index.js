@@ -60,12 +60,13 @@ const Menulinks = styled.nav`
   justify-content: center;
   text-align: center;
   height: 100vh;
-  width: 20%;
-  position: absolute;
+  width: 25%;
+  position: fixed;
   transition: 300ms;
   background-color: black;
   top: 0;
   right: 0;
+  z-index: 999;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
 
   ul{
