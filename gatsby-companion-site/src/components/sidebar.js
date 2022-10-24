@@ -103,8 +103,8 @@ return(
             </ul>
             <h3>Social</h3>
             <ul className="icons alt">
-              <li><Link to="#" class="icon alt fa-twitter"><span class="label">Twitter</span></Link></li>
-              <li><Link to="#" class="icon alt fa-facebook"><span class="label">Facebook</span></Link></li>
+              <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
               <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
               <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
             </ul>
