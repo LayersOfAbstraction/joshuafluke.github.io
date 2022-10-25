@@ -4,7 +4,6 @@ import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
 import pic3 from "../images/pic03.jpg"
 import { Sidebar } from "../components/sidebar"
-// Hello world
 import "../assets/css/font-awesome.min.css"
 import "../assets/css/main.css"
 import "../assets/css/noscript.css"
@@ -66,6 +65,7 @@ const Home = () => {
                   <span className="label">GitHub</span>
                 </a>
               </li>
+              <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
             </ul>
           </nav>
         {/* Main */}
