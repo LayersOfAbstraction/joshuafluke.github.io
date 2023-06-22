@@ -1,7 +1,8 @@
 import styled, {createGlobalStyle} from "styled-components"
 import React, { useState} from "react"
 import { Link } from "gatsby"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Global = createGlobalStyle`
   body, html{

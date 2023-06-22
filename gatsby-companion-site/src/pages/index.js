@@ -25,7 +25,10 @@ const Home = () => {
       />
       {/* Wrapper */}
       <div id="wrapper" className="fade-in">     
-          <Sidebar></Sidebar>
+          <Sidebar>
+          githubUrl="https://github.com/yourusername"
+          linkedinUrl="https://www.linkedin.com/in/yourusername"
+          </Sidebar>
         {/* Intro */}
         <div id="intro">
           <h1>My Portfolio</h1>
