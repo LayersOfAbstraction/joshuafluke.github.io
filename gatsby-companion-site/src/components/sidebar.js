@@ -1,8 +1,6 @@
 import styled, {createGlobalStyle} from "styled-components"
 import React, { useState} from "react"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Global = createGlobalStyle`
   body, html{
@@ -104,10 +102,16 @@ return(
             </ul>
             <h3>Social</h3>
             <ul className="icons alt">
-              <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-              <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-              <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-              <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+            <li>
+            <a href="https://github.com/LayersOfAbstraction/layersofabstraction.github.io/" className="icon fa-github">
+              <span className="label">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/jordan-nash-87b042173/" className="icon fa-linkedin">
+              <span className="label">LinkedIn</span>
+            </a>
+          </li>
             </ul>
           </Menulinks>
     </>
