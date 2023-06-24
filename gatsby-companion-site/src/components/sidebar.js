@@ -1,14 +1,7 @@
-import styled, {createGlobalStyle} from "styled-components"
-import React, { useState} from "react"
+import styled from "styled-components"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
-const Global = createGlobalStyle`
-  body, html{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-`
 const MenuIcon = styled.button`
   position: fixed;
   top: 2rem;
@@ -33,16 +26,16 @@ const MenuIcon = styled.button`
     transition: opacity 300ms, transform 300ms;
 
     :first-child{
-      transform: ${({nav}) => (nav ? 'rotate(45deg)': 'rotate(0)')}
+      transform: ${({ nav }) => (nav ? 'rotate(45deg)' : 'rotate(0)')}
     } 
     
 
     :nth-child(2){
-      opacity: ${({nav}) => (nav ? "0" : "1")}
+      opacity: ${({ nav }) => (nav ? "0" : "1")}
     } 
     
     :nth-child(3){
-      transform: ${({nav}) => (nav ? 'rotate(-45deg)': 'rotate(0)')}
+      transform: ${({ nav }) => (nav ? 'rotate(-45deg)' : 'rotate(0)')}
     }
   }  
 `
@@ -83,39 +76,36 @@ const Menulinks = styled.nav`
   }
 `
 
-export const Sidebar =  () => {
+export const Sidebar = () => {
   const [nav, showNav] = useState(false);
-return(
-<>
-<Global />
-          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
-            <div/>
-            <div/>
-            <div/>
-          </MenuIcon>
-          <Menulinks nav={nav}>
-            <ul>
-              <Link to="#">Blog</Link>
-            </ul>
-            <ul>
-              <Link to="#">home</Link>
-            </ul>
-            <h3>Social</h3>
-            <ul className="icons alt">
-            <li>
-            <a href="https://github.com/LayersOfAbstraction/layersofabstraction.github.io/" className="icon fa-github">
+  return (
+    <>
+      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+        <div />
+        <div />
+        <div />
+      </MenuIcon>
+      <Menulinks nav={nav}>
+        <ul>
+          <Link to="#">Blog</Link>
+        </ul>
+        <ul>
+          <Link to="#">home</Link>
+        </ul>
+        <h3>Social</h3>
+        <ul className="icons alt">
+          <li>
+            <Link to="https://github.com/LayersOfAbstraction/layersofabstraction.github.io/" className="icon fa-github">
               <span className="label">GitHub</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/jordan-nash-87b042173/" className="icon fa-linkedin">
+            <Link to="https://www.linkedin.com/in/jordan-nash-87b042173/" className="icon fa-linkedin">
               <span className="label">LinkedIn</span>
-            </a>
+            </Link>
           </li>
-            </ul>
-          </Menulinks>
+        </ul>
+      </Menulinks>
     </>
   );
 }
-
-
