@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState} from "react"
+import React from "react"
 import pic1 from "../images/pic01.jpg"
 import pic2 from "../images/pic02.jpg"
 import pic3 from "../images/pic03.jpg"
